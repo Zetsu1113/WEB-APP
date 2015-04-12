@@ -5,6 +5,16 @@ html, body {
 	margin:0;
 	padding:0;
 }
+html{
+}
+body{
+}
+.row {
+	position: relative;	
+}
+.footer {
+	position: absolute;
+}	
 .navbar {
 	z-index: 5;	
 }
@@ -74,7 +84,6 @@ html, body {
     right:0px;
 }
 
-
 .track3 {
     width: 10px;
     background: rgba(0, 0, 0, 0);
@@ -107,7 +116,12 @@ html, body {
 
 /*custom bootstrap */
 
+#myCarousel {
+	z-index: 1;	
+}
+
 nav{
+	z-index: 5;
 	transition: all 0.4s ease;
 }
 nav a {
@@ -118,6 +132,7 @@ nav a {
 }
 
 nav .navbar-toggle {
+	transition: all 0.4s ease;
 	margin: 13px 15px 13px 0;
 }
 
@@ -128,14 +143,46 @@ nav.navbar.shrink {
 }
 
 nav.shrink a {
-	padding-top: 15px !important;
-	/*padding-bottom: 5px !important;*/
+	transition: all 0.4s ease;
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
 	font-size: 20px;
 }
 
 nav.shrink .navbar-toggle {
 	padding: 4px 5px;
 	margin: 8px 15px 8px 0;
+}
+
+nav #loginSpace_admin, nav #loginSpace_user{
+	height: inherit;	
+}
+
+nav.shrink #loginSpace_admin, nav.shrink #loginSpace_admin #navLink{
+	margin-bottom: inherit;
+	font-size: 9px;
+}
+
+nav.shrink #loginSpace_user, nav.shrink #loginSpace_user #navLink{
+	margin-bottom: inherit;
+	font-size: 9px;
+}
+
+nav.shrink #loginSpace_admin, nav.shrink #loginSpace_admin #navLink a{
+	margin-bottom: inherit;
+	font-size: 9px;
+}
+
+nav.shrink #loginSpace_user, nav.shrink #loginSpace_user #navLink a{
+	margin-bottom: inherit;
+	font-size: 9px;
+}
+
+
+
+nav.shrink .navbar-brand {
+	height: inherit;
+	width: auto;
 }
 
 #bLogin.hidden{
@@ -152,10 +199,34 @@ nav.shrink .navbar-toggle {
 	font-height: 1pt;
 
 }
-#forgotPass > a {
+#forgotPass > a, #navLink {
 	font-style:italic;
 	font-size: 15px;
 }
+#navLink, #navLink a {
+	font-size: 15px;
+	text-decoration: none;
+	transition: all 0.4s ease;
+	color: #333;
+	font-weight:bold;	
+}
+#navLink a:hover{
+	color: #666;
+}
 #forgotPass > a:hover{
 	text-decoration: none;
+}
+
+
+.defLinks a {
+	color: #333;
+	text-decoration: none;
+}
+
+.wrapFlow{
+	height: 250px;
+    vertical-align: top;
+    overflow: hidden;
+	overflow-y: scroll;
+	overflow-x: scroll;
 }

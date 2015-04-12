@@ -1,5 +1,24 @@
 // JavaScript Document
 
+// Page Transition
+
+$(document).ready(function() {
+			$("body").css("display", "none");
+		 
+			$("body").fadeIn(2000);
+		 
+			$("a.transition").click(function(event){
+				event.preventDefault();
+				linkLocation = this.href;
+				$("body").fadeOut(1000, redirectPage);      
+			});
+				 
+			function redirectPage() {
+				window.location = linkLocation;
+			}
+		});
+
+
 //SMOOTH-SCROLL
 	$(function() {
 	  $('a[href*=#]:not([href=#myCarousel])').click(function() {
@@ -56,8 +75,23 @@ function aor(){
 	document.getElementById("aOr").className =
    	document.getElementById("aOr").className.replace
       ( /(?:^|\s)hidden-sm(?!\S)/g , '' );
-	  document.getElementById("aOr").className =
+	document.getElementById("aOr").className =
    	document.getElementById("aOr").className.replace
       ( /(?:^|\s)hidden-xs(?!\S)/g , '' );
 
 };
+
+function showPanel(){
+	document.getElementById("loginSpace").className += "hidden";
+	document.getElementById("loginSpace_admin").className =
+	document.getElementById("loginSpace_admin").className.replace
+      ( /(?:^|\s)hidden(?!\S)/g , '' );
+	  return false;
+};
+
+
+$('#imageHead').enscroll({
+    showOnHover: true,
+    verticalTrackClass: 'track3',
+    verticalHandleClass: 'handle3'
+});
