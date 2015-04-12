@@ -81,12 +81,23 @@ function aor(){
 
 };
 
-function showPanel(){
+function showPanel(x){
 	document.getElementById("loginSpace").className += "hidden";
 	document.getElementById("loginSpace_admin").className =
 	document.getElementById("loginSpace_admin").className.replace
       ( /(?:^|\s)hidden(?!\S)/g , '' );
+	  
+	if(x!=null){
+		adjustDonate();	
+	}
 	  return false;
+};
+
+function adjustDonate(){
+	document.getElementById("donate_unlog").className += "hidden";
+	document.getElementById("donate_log").className =
+	document.getElementById("donate_log").className.replace
+      ( /(?:^|\s)hidden(?!\S)/g , '' );
 };
 
 

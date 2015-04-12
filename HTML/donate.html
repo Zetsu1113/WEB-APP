@@ -78,7 +78,7 @@
                 
                 	<div class='row'>
 						<div class='col-xs-9 col-xs-offset-1'>
-                            <form onSubmit='return showPanel()'>
+                            <form onSubmit='return showPanel("txt")'>
                               <div class="form-group">
                                 <input type="userID" class="form-control" id="loginInput_1" placeholder="User ID">
                                 <input type="password" class="form-control" id="loginInput_2" placeholder="Password">
@@ -101,8 +101,8 @@
     <div class='container-fluid'>
     	<div class='container'>
         	<div class='row vwContent'>
-            	<div class='hidden'>
-            	<div class='row hidden'>
+            	<div class='' id='donate_unlog'>
+            	<div class='row'>
                 	<div class='col-xs-12'>
                     	<h1 class='text-center'><em>You can log in to your existing account to track your donations or donate anonymously with PayPal!</em></h1>
                     </div>
@@ -148,7 +148,7 @@
                 
                 <!--Logged In Donate-->
                 
-                <div class='visible'>
+                <div class='hidden' id='donate_log'>
                 <div class='row'>
                 	<div class='col-xs-12'>
                     	<h1 class='text-center'><em>Transfer donations straight using your account</em></h1>
