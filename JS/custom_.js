@@ -106,3 +106,30 @@ $('#imageHead').enscroll({
     verticalTrackClass: 'track3',
     verticalHandleClass: 'handle3'
 });
+
+// HIDDEN CONTENT
+
+function showContent(contain,x){
+	$(contain).load(x);
+};
+
+function httpGet(theUrl){
+	var xmlHttp = null;
+	
+	xmlHttp = new XMLHttpRequest();
+	xmlHttp.open( "GET", theUrl, false );
+	xmlHttp.send( null );
+	return xmlHttp.responseText;
+};
+
+function getSelBox(x){
+	var sel = document.getElementById(x);
+
+	var selectedText = sel.options[sel.selectedIndex].text;	
+	
+	return selectedText;
+}
+
+function setVal(x){
+	editor.setValue(httpGet(x));
+}

@@ -230,3 +230,35 @@ nav.shrink .navbar-brand {
 	overflow-y: scroll;
 	overflow-x: scroll;
 }
+
+.wrapFlow_admin{
+	height: 350px;
+    vertical-align: top;
+    overflow: hidden;
+	overflow-y: scroll;
+	overflow-x: scroll;
+}
+
+.admin-links a{
+	color: #333;
+}
+
+.admin-links a:hover {
+	text-decoration: none;
+	
+}
+
+#user_box{
+	height: 200px;
+	width: 270px;
+}
+
+#editor { 
+		width: inherit;
+		height: 400px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+}
