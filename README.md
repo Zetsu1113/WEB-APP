@@ -1,21 +1,5 @@
 # WEB-APP
-ICS 113 Web Application Project 2CSB
-
-People Helping People Foundation
-
-Front-End Developer: Cancio, Kyle Cedrick R.
-
-Back-End Developer: Suarez, Jessie James P.
-
-
-UPDATE 1.2
-- Added Admin Panel
-- - Donation Log Page
-- - Users Page
-- - Edit Pages Page
-- Fixed links directing to Admin Panel
-- Added ACE Editor plugin for the Edit Pages page
-- Updated custom_.js file. Included new functions for beta testing
+ICS 113 Web Application Project
 
 UPDATE 1.1.1
 - Added new pages

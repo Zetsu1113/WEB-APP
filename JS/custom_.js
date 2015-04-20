@@ -2,6 +2,25 @@
 
 // Page Transition
 
+$(window).scroll(function() {
+    if ($(".navbar").offset().top > 5) {
+        $(".navbar-fixed-top").addClass("top-nav-collapse");
+    } else {
+        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+    }
+});
+
+//jQuery for page scrolling feature - requires jQuery Easing plugin
+$(function() {
+    $('a.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
+});
+
 $(document).ready(function() {
 			$("body").css("display", "none");
 		 
@@ -86,6 +105,7 @@ function showPanel(x){
 	document.getElementById("loginSpace_admin").className =
 	document.getElementById("loginSpace_admin").className.replace
       ( /(?:^|\s)hidden(?!\S)/g , '' );
+	document.getElementById("loginSpace_admin").className += "visible"; 
 	  
 	if(x!=null){
 		adjustDonate();	
